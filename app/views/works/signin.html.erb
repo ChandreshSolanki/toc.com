@@ -1,0 +1,23 @@
+ <style>
+   body
+    {
+    background-color:#A17C9C;
+    }
+    </style>
+<h2>User : Signin</h2>
+
+<p>
+  <%= form_for(@work, :url=> check_signin_works_path) do |f|%>
+    <lable>Email</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= f.text_field :email%> 
+    </br>
+    <lable>Password</lable>
+    <%= f.password_field :encrypted_password%> 
+    </br> 
+    <%= f.submit "signin"%>
+  <% end %> 
+</p>
+<p>
+<%= link_to "back" ,root_path %>
+</p>
+

@@ -1,0 +1,17 @@
+<style>
+   body
+    {
+    background-color:#A17C9C;
+    }
+</style>
+<div align="center">
+<h1><%= @current_work.fname%></h1>
+</div>
+<h2>You are login successfully</h2>
+  <%= link_to "logout",root_path %>
+   <div class="edit">
+    <div align="right">
+     <%= link_to "edit" ,edit_profile_works_path %>
+    </div>
+   </div>
+

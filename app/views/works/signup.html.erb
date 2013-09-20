@@ -1,0 +1,55 @@
+<html>
+<div style="width:500px; margin:0 auto;">
+  <style>
+   body
+    {
+    background-color:#A17C9C;
+    }
+    </style>
+<h2>User : Registration</h2>
+</div>
+<body>
+ <p>
+  <div style="width:500px; margin:0 auto;">
+  <%= form_for(@work) do |f| %>
+   <label>Firstname</label>
+   <%= f.text_field :fname %>
+   </br>
+   <label>Lastname</label>
+   <%= f.text_field :lname %>
+   </br>
+   <label>Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <%= f.text_field :email %>
+   </br>
+   <label>Password</label>
+   <%= f.password_field :encrypted_password %>
+   </br>
+   <label>DOB</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <%= f.text_field :date_of_birth %>
+   </br>
+   <label>Gender</label>&nbsp;&nbsp;&nbsp;&nbsp;
+   <%= f.select :gender, options_for_select([["Male", "m"], ["Female", "f"]]) %>
+   <br/>
+   <label>Address</label>&nbsp;&nbsp;
+    <%= f.text_field :address %>
+   </br>
+   <label>Language</label>
+   <%= f.select :language, options_for_select([["English", "e"], ["Hindi", "h"]]) %>
+   </br>
+   <label>Address</label>&nbsp;&nbsp;
+   <%= f.text_field :address %>
+   </br>
+   <label>Hobby</label>&nbsp;&nbsp;&nbsp;&nbsp;
+   <%= f.text_field :hobby %>
+   </br>
+   <%= f.submit "signup" %>
+   <% end %>
+   </div>
+  <div style="width:500px; margin:0 auto;">
+   <p>
+      <%= link_to "signin", signin_works_path %>
+    </p>
+  <div style="width:500px; margin:0 auto;">
+ </p>
+</body>
+</html>
